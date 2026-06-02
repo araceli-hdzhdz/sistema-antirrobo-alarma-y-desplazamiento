@@ -230,7 +230,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 ====================== */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--cream);color:var(--ink);overflow-x:hidden}
+html{font-family:var(--font);font-size:16px}
+body{font-family:var(--font);background:var(--cream);color:var(--ink);overflow-x:hidden;line-height:1.75}
+p,li,a,span,label,button,input,textarea{font-family:inherit}
+h1,h2,h3,h4,h5,h6{font-family:var(--font)}
+section p,.overview-card p,.steam-card p,.objetivo-card p,.estado-content p,.objetivos-list li,.resultados-clave-section li,.roles-section td,.roles-section th{font-size:13px;line-height:1.75;color:var(--ink2)}
+ul,ol{list-style-position:inside}
 
 /* small utility classes (converted inline styles) */
 .problema-h2{font-size:clamp(22px,2.5vw,32px);font-weight:800;color:var(--blue);grid-column:1/-1;margin-bottom:28px;line-height:1.2}
@@ -271,7 +276,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .estado-meta{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .estado-meta div{background:var(--blue-light);border-radius:12px;padding:18px;font-size:13px;color:var(--ink2)}
 .arquitectura-card,.flujo-card{display:grid;gap:18px}
-.mermaid{background:var(--white);border:1px solid rgba(24,0,173,0.12);border-radius:18px;padding:24px;overflow-x:auto}
+.mermaid{background:var(--white);border:1px solid rgba(24,0,173,0.12);border-radius:18px;padding:24px;overflow-x:auto;font-family:var(--font),sans-serif;font-size:13px;line-height:1.65}
 .metodologia-grid{grid-template-columns:repeat(3,1fr);gap:18px}
 .resultados-clave-section{background:var(--cream);padding:60px 48px}
 .resultados-clave-section h4{font-size:18px;color:var(--blue);margin-bottom:16px}
