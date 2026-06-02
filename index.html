@@ -10,6 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="carousel.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
@@ -205,7 +206,7 @@
   <div class="estado-content">
     <p>El proyecto corresponde a un prototipo funcional validado mediante pruebas experimentales. El prototipo ha sido probado con 20 mediciones reales, se identificaron y corrigieron errores de hardware y software, y el sistema demostró el funcionamiento esperado en laboratorio.</p>
     <div class="estado-meta">
-      <div><strong>Avance estimado:</strong> 90 %</div>
+      <div><strong>Avance estimado:</strong> 100 %</div>
       <div><strong>Nivel de madurez:</strong> prototipo funcional validado</div>
       <div><strong>Tipo de validación:</strong> pruebas experimentales y análisis estadístico</div>
     </div>
@@ -716,15 +717,145 @@
       <div class="foto-info"><h5>Prueba de desplazamiento</h5><p>Prueba del movimiento del prototipo al detectar un objeto, con la secuencia de avance y retroceso activada.</p><div class="foto-meta">Fecha: 31/05/2026 · Responsable: Equipo completo</div></div>
     </div>
     <div class="foto-card">
-      <img src="imagenes/Circuito%20Sistema%20Antirobo%20Alarma%20y%20desplazamiento.jpeg" alt="Circuito completo" style="width:100%;height:220px;object-fit:cover;display:block" />
-      <div class="foto-info"><h5>Vista general del prototipo</h5><p>Visión general del prototipo en protoboard y Arduino, mostrando la integración de sensores, controlador y alimentación.</p><div class="foto-meta">Fecha: 31/05/2026 · Responsable: Araceli H.</div></div>
+      <img src="imagenes/listado.png" alt="listado components" style="width:100%;height:220px;object-fit:cover;display:block" />
+      <div class="foto-info"><h5>Listado de componentes</h5><p>Lista detallada de todos los componentes utilizados en la construcción del prototipo.</p><div class="foto-meta">Fecha: 31/05/2026 · Responsable: Araceli H.</div></div>
     </div>
     <div class="foto-card">
       <img src="imagenes/2%20cableado.jpeg" alt="Cableado extra" style="width:100%;height:220px;object-fit:cover;display:block" />
       <div class="foto-info"><h5>Detalle del cableado</h5><p>Otro ángulo de las conexiones importantes para garantizar el correcto funcionamiento del sistema.</p><div class="foto-meta">Fecha: 31/05/2026 · Responsable: Annia V.</div></div>
     </div>
+    <div class="foto-card">
+      <video src="media/video00.mp4" controls alt="Video de funcionamiento" style="width:100%;height:220px;object-fit:cover;display:block" ></video>
+      <div class="foto-info"><h5>Video de funcionamiento</h5><p>Video que muestra el funcionamiento del prototipo en acción.</p><div class="foto-meta">Fecha: 31/05/2026 · Responsable: Equipo completo</div></div>
   </div>
-  <p style="font-size:12px;color:var(--ink2);margin-top:16px;font-style:italic">* Estas imágenes muestran el circuito real y la simulación en Tinkercad.</p>
+
+  <!-- Carousel de fotos y videos de media -->
+  <div class="carousel-container" id="mediaCarousel">
+    <div class="carousel-track">
+      <!-- Videos -->
+      <div class="carousel-slide">
+        <video src="media/video01.mp4" controls></video>
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Video 1</p>
+      </div>
+      <div class="carousel-slide">
+        <video src="media/video02.mp4" controls></video>
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Video 2</p>
+      </div>
+      <div class="carousel-slide">
+        <video src="media/video03.mp4" controls></video>
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Video 3</p>
+      </div>
+      <!-- Fotos -->
+      <div class="carousel-slide">
+        <img src="media/foto01.jpeg" alt="Foto 1" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 1</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto02.jpeg" alt="Foto 2" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 2</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto03.jpeg" alt="Foto 3" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 3</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto04.jpeg" alt="Foto 4" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 4</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto05.jpeg" alt="Foto 5" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 5</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto06.jpeg" alt="Foto 6" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 6</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto07.jpeg" alt="Foto 7" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 7</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto08.jpeg" alt="Foto 8" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 8</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto09.jpeg" alt="Foto 9" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 9</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto10.jpeg" alt="Foto 10" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 10</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto11.jpeg" alt="Foto 11" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 11</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto12.jpeg" alt="Foto 12" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 12</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto13.jpeg" alt="Foto 13" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 13</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto14.jpeg" alt="Foto 14" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 14</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto15.jpeg" alt="Foto 15" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 15</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto16.jpeg" alt="Foto 16" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 16</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto17.jpeg" alt="Foto 17" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 17</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto18.jpeg" alt="Foto 18" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 18</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto19.jpeg" alt="Foto 19" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 19</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto20.jpeg" alt="Foto 20" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 20</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto21.jpeg" alt="Foto 21" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 21</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto22.jpeg" alt="Foto 22" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 22</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto23.jpeg" alt="Foto 23" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 23</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="media/foto24.jpeg" alt="Foto 24" />
+        <p style="margin-top:12px;font-size:13px;color:var(--ink2)">Foto 24</p>
+      </div>
+    </div>
+
+    <!-- Controles de navegación -->
+    <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Anterior">❮</button>
+    <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Siguiente">❯</button>
+
+    <!-- Indicadores de puntos -->
+    <div class="carousel-dots" id="carouselDots"></div>
+
+    <!-- Contador de slides -->
+    <div class="carousel-counter" id="carouselCounter"></div>
+  </div>
+  
+  <p style="font-size:12px;color:var(--ink2);margin-top:16px;font-style:italic">* Carousel con todos los videos y fotos del proyecto. Total: 3 videos + 24 fotos de las pruebas y desarrollo.</p>
 </section>
 
 <!-- ===== 9. BITÁCORA DE DESARROLLO ===== -->
@@ -945,6 +1076,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="carousel.js"></script>
 </body>
 </html>
 
