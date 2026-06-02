@@ -72,6 +72,20 @@ if (document.getElementById('chartScatter')) {
 // (All JS logic from Arduino sketch is C++ and intentionally not included here.)
 
 /* ======================
+   NAVEGACIÓN RESPONSIVE
+====================== */
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+}
+
+/* ======================
    INICIALIZACIÓN
 ====================== */
 // Charts initialized above when DOM includes canvas elements.

@@ -7,14 +7,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Sistema Antirobo · Arduino UNO · 2°B</div>
+  <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
   <ul class="nav-links">
+    <li><a href="#resumen">Resumen</a></li>
+    <li><a href="#steam">STEAM</a></li>
+    <li><a href="#objetivo-general">Objetivo</a></li>
+    <li><a href="#estado">Estado</a></li>
     <li><a href="#problema">Problema</a></li>
     <li><a href="#circuito">Circuito</a></li>
     <li><a href="#codigo">Código</a></li>
@@ -24,6 +32,7 @@
     <li><a href="#equipo">Equipo</a></li>
   </ul>
 </nav>
+<main id="main-content">
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -40,6 +49,45 @@
       <p>Un sensor ultrasónico vigila el entorno del vehículo. Si detecta un intruso a menos de 20 cm, activa alarma sonora, luminosa y desplaza el auto automáticamente.</p>
       <a href="#problema" class="btn-hero">Conocer el proyecto</a>
     </div>
+  </div>
+</section>
+
+<!-- ===== RESUMEN EJECUTIVO ===== -->
+<div class="section-band" id="resumen">
+  <h2>Resumen Ejecutivo</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="overview-section">
+  <div class="overview-grid">
+    <div>
+      <p>El proyecto "Sistema Antirrobo Inteligente para Vehículos con Arduino UNO" responde a la necesidad de proteger automóviles estacionados en zonas sin vigilancia. Se propone un sistema de bajo costo que detecta obstáculos mediante un sensor ultrasónico HC-SR04 y activa una alarma visual y sonora junto con un desplazamiento autónomo del prototipo.</p>
+      <p>La solución integra Arduino UNO como controlador central, un buzzer, un LED y un controlador de motor L293D para coordinar señales de salida y generar movimiento de avance-retroceso. La implementación fue validada con pruebas experimentales que incluyeron al menos 20 mediciones reales y análisis estadístico completo.</p>
+      <p>Los resultados muestran una distancia promedio de detección cercana a 6.7 cm y una estabilidad alta del sensor, permitiendo comprobar la hipótesis planteada. El prototipo funcional fue desarrollado como un sistema de laboratorio validado, con impacto esperado en la reducción de robos no violentos a vehículos mediante una respuesta tecnológica accesible.</p>
+    </div>
+    <div class="overview-card">
+      <h4>Resultados clave</h4>
+      <ul>
+        <li>Distancia promedio medida: 6.7 cm.</li>
+        <li>Precisión observada con desviación estándar de 0.64 cm.</li>
+        <li>Sistema funciona con alarma visual, sonora y movimiento autónomo.</li>
+        <li>Hipótesis validada mediante pruebas experimentales y análisis estadístico.</li>
+        <li>Prototipo documentado para replicación y mejoras futuras.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORÍA STEAM ===== -->
+<div class="section-band" id="steam">
+  <h2>Categoría y Clasificación STEAM</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="steam-section">
+  <div class="steam-grid">
+    <div class="steam-card"><h4>Categoría STEAM</h4><p>Tecnología</p></div>
+    <div class="steam-card"><h4>Área de aplicación</h4><p>Seguridad vehicular y electrónica aplicada</p></div>
+    <div class="steam-card"><h4>Nivel educativo</h4><p>Secundaria / Bachillerato</p></div>
+    <div class="steam-card"><h4>Tipo de proyecto</h4><p>Prototipo tecnológico con validación experimental</p></div>
   </div>
 </section>
 
@@ -121,6 +169,49 @@
   </div>
 </section>
 
+<!-- ===== OBJETIVO GENERAL ===== -->
+<div class="section-band" id="objetivo-general">
+  <h2>Objetivo General</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="objetivo-section">
+  <div class="objetivo-card">
+    <p>Desarrollar un prototipo funcional de sistema de detección de obstáculos para vehículos basado en Arduino UNO y sensor ultrasónico HC-SR04, que active una alarma visual y sonora y genere un movimiento autónomo de avance-retroceso cuando detecte un objeto a menos de 20 cm.</p>
+  </div>
+</section>
+
+<!-- ===== OBJETIVOS ESPECÍFICOS ===== -->
+<div class="section-band" id="objetivos">
+  <h2>Objetivos Específicos</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="objetivos-section">
+  <ul class="objetivos-list">
+    <li>Implementar el sensor HC-SR04 con Arduino UNO para medir distancias en tiempo real.</li>
+    <li>Programar la activación de alarma sonora y visual al detectar un objeto cercano.</li>
+    <li>Controlar el puente H L293D y los motores DC para ejecutar una secuencia de movimiento autónomo de avance y retroceso.</li>
+    <li>Validar el prototipo mediante pruebas experimentales con al menos 20 mediciones y registro de resultados.</li>
+    <li>Documentar la arquitectura del sistema, la metodología de pruebas y los resultados estadísticos.</li>
+    <li>Evaluar y mejorar la estabilidad del sistema frente a lecturas erróneas del sensor.</li>
+  </ul>
+</section>
+
+<!-- ===== ESTADO DEL PROYECTO ===== -->
+<div class="section-band" id="estado">
+  <h2>Estado del Proyecto</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="estado-section">
+  <div class="estado-content">
+    <p>El proyecto corresponde a un prototipo funcional validado mediante pruebas experimentales. El prototipo ha sido probado con 20 mediciones reales, se identificaron y corrigieron errores de hardware y software, y el sistema demostró el funcionamiento esperado en laboratorio.</p>
+    <div class="estado-meta">
+      <div><strong>Avance estimado:</strong> 90 %</div>
+      <div><strong>Nivel de madurez:</strong> prototipo funcional validado</div>
+      <div><strong>Tipo de validación:</strong> pruebas experimentales y análisis estadístico</div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 2. CIRCUITO Y DIAGRAMA ===== -->
 <div class="section-band" id="circuito">
   <h2>Diseño del circuito<br>y conexiones</h2>
@@ -180,6 +271,47 @@
         </tbody>
       </table>
     </div>
+</section>
+
+<!-- ===== ARQUITECTURA DEL SISTEMA ===== -->
+<div class="section-band" id="arquitectura">
+  <h2>Arquitectura del Sistema</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="arquitectura-section">
+  <div class="arquitectura-card">
+    <div class="mermaid">
+      graph TD
+        A[Sensor ultrasónico HC-SR04] -->|Trigger/Echo| B[Arduino Uno]
+        B --> C[Buzzer]
+        B --> D[LED rojo]
+        B --> E[Controlador L293D]
+        E --> F[Motor DC]
+        B --> G[Fuente de alimentación 5V / 6V]
+    </div>
+    <p>El Arduino Uno recibe la señal del sensor ultrasónico y controla las salidas hacia el buzzer, el LED y el controlador de motor L293D. El L293D alimenta el motor DC para generar el movimiento autónomo.</p>
+  </div>
+</section>
+
+<!-- ===== DIAGRAMA DE FLUJO ===== -->
+<div class="section-band" id="flujo">
+  <h2>Diagrama de Flujo</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="flujo-section">
+  <div class="flujo-card">
+    <div class="mermaid">
+      graph TD
+        Start((Inicio)) --> Medicion[Medición de distancia]
+        Medicion --> Comparacion{¿Distancia ≤ 20 cm?}
+        Comparacion -- Sí --> Alarma[Activación de alarma visual y sonora]
+        Alarma --> Movimiento[Movimiento del motor]
+        Movimiento --> Nueva[Nueva medición]
+        Nueva --> Comparacion
+        Comparacion -- No --> Reposo[Reposo del sistema]
+        Reposo --> Nueva
+    </div>
+    <p>El flujo de trabajo inicia con la medición de distancia, compara la lectura con el umbral y decide si debe activar la alarma y el motor. El proceso se repite continuamente mientras el sistema permanece encendido.</p>
   </div>
 </section>
 
@@ -389,6 +521,40 @@
   </div>
 </section>
 
+<!-- ===== METODOLOGÍA DE PRUEBAS ===== -->
+<div class="section-band" id="metodologia">
+  <h2>Metodología de Pruebas</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="metodologia-section">
+  <div class="metodologia-grid">
+    <div class="metodologia-card">
+      <h4>Objetivo de las pruebas</h4>
+      <p>Verificar el funcionamiento del prototipo en condiciones de laboratorio, confirmando la detección de objetos por debajo de 20 cm y la respuesta adecuada de la alarma y el movimiento del motor.</p>
+    </div>
+    <div class="metodologia-card">
+      <h4>Condiciones de prueba</h4>
+      <p>El prototipo se probó con objetos sólidos a diferentes distancias frente al sensor HC-SR04, en un entorno interior con iluminación controlada y alimentación estable de 5V y 6V.</p>
+    </div>
+    <div class="metodologia-card">
+      <h4>Equipos utilizados</h4>
+      <p>Arduino UNO, sensor ultrasónico HC-SR04, controlador L293D, motor DC, buzzer, LED rojo, protoboard, cables Dupont, multímetro y fuente de alimentación 4×AA.</p>
+    </div>
+    <div class="metodologia-card">
+      <h4>Procedimiento</h4>
+      <p>1. Conectar el circuito conforme al diagrama. 2. Cargar el sketch en Arduino. 3. Medir distancias con el objeto móvil frente al sensor. 4. Registrar la respuesta del LED, buzzer y motor. 5. Repetir 20 veces.</p>
+    </div>
+    <div class="metodologia-card">
+      <h4>Criterios de aceptación</h4>
+      <p>El sistema se considera aceptado si detecta objetos a ≤ 20 cm, activa el buzzer y LED, y ejecuta la secuencia de avance-retroceso una vez por detección sin quedarse bloqueado.</p>
+    </div>
+    <div class="metodologia-card">
+      <h4>Resultados esperados</h4>
+      <p>Lecturas consistentes cercanas a 6–8 cm, activación confiable de alarmas y movimiento autónomo repetible en cada detección, con un coeficiente de variación inferior al 15 %.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 6. PRUEBAS EXPERIMENTALES (20+ datos) ===== -->
 <div class="section-band" id="datos">
   <h2>Pruebas experimentales<br>y datos reales</h2>
@@ -435,6 +601,17 @@
         </tbody>
       </table>
     </div>
+  </div>
+
+  <div class="resultados-clave-section">
+    <h4>Resultados Clave</h4>
+    <ul>
+      <li>Distancia promedio medida: 6.7 cm.</li>
+      <li>Precisión observada con desviación estándar de 0.64 cm y coeficiente de variación de 9.55 %.</li>
+      <li>Sistema completo con alarma visual, sonora y movimiento autónomo.</li>
+      <li>Hipótesis validada con datos reales y errores documentados.</li>
+      <li>Prototipo funcional y replicable en entornos de laboratorio.</li>
+    </ul>
   </div>
 </section>
 
@@ -611,6 +788,24 @@
   </div>
 </section>
 
+<!-- ===== ROLES Y RESPONSABILIDADES ===== -->
+<div class="section-band" id="roles">
+  <h2>Roles y Responsabilidades</h2>
+  <span class="arrow-icon">↙</span>
+</div>
+<section class="roles-section">
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead><tr><th style="text-align:left">Integrante</th><th>Responsabilidades</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left;font-weight:600;color:var(--ink)">Hernández Hernández Araceli</td><td>Investigación, documentación técnica, pruebas finales y validación experimental.</td></tr>
+        <tr><td style="text-align:left;font-weight:600;color:var(--ink)">Reyes Flores Jennifer</td><td>Programación Arduino, pruebas de software, simulación Tinkercad y análisis de datos.</td></tr>
+        <tr><td style="text-align:left;font-weight:600;color:var(--ink)">Vera Domínguez Annia Montserrat</td><td>Diseño del circuito, armado del prototipo físico, corrección de cableado y elaboración de evidencias fotográficas.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <!-- ===== 10. CONCLUSIONES ===== -->
 <div class="section-band" id="conclusiones">
   <h2>Conclusiones<br>y aprendizajes</h2>
@@ -709,7 +904,8 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+</main>
+
 <footer class="footer-section">
   <div class="footer-left">
     <div>
@@ -720,6 +916,10 @@
     <div class="footer-links-group">
       <div class="footer-links-title">Navegación rápida</div>
       <div class="footer-links">
+        <a href="#resumen">Resumen</a>
+        <a href="#steam">STEAM</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#estado">Estado</a>
         <a href="#problema">Problema</a>
         <a href="#circuito">Circuito</a>
         <a href="#codigo">Código</a>
@@ -747,3 +947,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+

@@ -250,9 +250,33 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);overflow-x
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:16px 48px;background:rgba(255,252,243,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(24,0,173,0.1)}
 .nav-logo{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:0.5px;text-transform:uppercase}
-.nav-links{display:flex;gap:28px;list-style:none}
+.menu-toggle{display:none;border:none;background:transparent;color:var(--ink2);font-size:24px;cursor:pointer;padding:8px 10px;border-radius:12px;transition:background 0.2s}
+.menu-toggle:hover,.menu-toggle:focus{background:rgba(24,0,173,0.08);outline:none}
+.nav-links{display:flex;gap:24px;list-style:none}
 .nav-links a{font-size:11px;font-weight:700;color:var(--ink2);text-decoration:none;letter-spacing:0.5px;text-transform:uppercase;transition:color 0.2s}
-.nav-links a:hover{color:var(--blue)}
+.nav-links a:hover,.nav-links a:focus{color:var(--blue);outline:none}
+.nav-links a:focus-visible{outline:2px dashed var(--blue);outline-offset:3px}
+.skip-link{position:absolute;top:16px;left:16px;background:var(--blue);color:#fff;padding:10px 14px;border-radius:10px;z-index:150;transform:translateY(-120%);transition:transform 0.2s ease-in-out}
+.skip-link:focus{transform:translateY(0);outline:none}
+.nav-links.open{display:flex}
+
+.overview-section,.steam-section,.objetivo-section,.objetivos-section,.estado-section,.arquitectura-section,.flujo-section,.metodologia-section,.resultados-clave-section,.roles-section{padding:60px 48px;background:var(--cream)}
+.overview-grid,.steam-grid,.metodologia-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.overview-card,.steam-card,.arquitectura-card,.flujo-card,.objetivo-card,.estado-content,.metodologia-card{background:var(--white);border:1px solid rgba(24,0,173,0.12);border-radius:18px;padding:26px}
+.overview-card h4,.steam-card h4,.metodologia-card h4{font-size:14px;color:var(--blue);margin-bottom:14px}
+.overview-card ul{list-style:disc;margin-left:18px;color:var(--ink2);line-height:1.8}
+.steam-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+.steam-card p{font-size:13px;color:var(--ink2);line-height:1.75}
+.objetivos-list{list-style:disc;margin-left:18px;color:var(--ink2);line-height:1.75}
+.estado-meta{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.estado-meta div{background:var(--blue-light);border-radius:12px;padding:18px;font-size:13px;color:var(--ink2)}
+.arquitectura-card,.flujo-card{display:grid;gap:18px}
+.mermaid{background:var(--white);border:1px solid rgba(24,0,173,0.12);border-radius:18px;padding:24px;overflow-x:auto}
+.metodologia-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+.resultados-clave-section{background:var(--cream);padding:60px 48px}
+.resultados-clave-section h4{font-size:18px;color:var(--blue);margin-bottom:16px}
+.resultados-clave-section ul{list-style:disc;margin-left:18px;line-height:1.8;color:var(--ink2)}
+.roles-section{padding:60px 48px;background:var(--cream)}
 
 /* HERO */
 .hero{min-height:100vh;background:var(--blue);position:relative;overflow:hidden;display:grid;grid-template-rows:1fr auto;padding:100px 48px 60px}
@@ -511,20 +535,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
    MEDIA QUERIES
 ====================== */
 @media(max-width:900px){
-  nav{padding:14px 20px}.nav-links{display:none}
+  nav{padding:14px 20px}
+  .menu-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:68px;right:20px;flex-direction:column;align-items:flex-start;gap:14px;width:calc(100vw - 40px);padding:20px;background:rgba(255,252,243,0.98);border:1px solid rgba(24,0,173,0.12);border-radius:18px;box-shadow:0 18px 36px rgba(0,0,0,0.08)}
+  .nav-links.open{display:flex}
   .hero{padding:60px 20px 40px}
   .hero-top{flex-direction:column;align-items:flex-start;gap:18px}
   .hero-title-right h1,.hero-title-left h1{font-size:clamp(36px,11vw,58px);text-align:left}
   .hero-bottom{grid-template-columns:1fr;gap:28px}
   .hero-cta-block{align-items:flex-start;text-align:left;max-width:none}
   .hero-cta-block .btn-hero{align-self:flex-start}
-  .features-strip,.problema-section,.about-section,.cards-section,.testimonials-section,.stats-section,.code-section,.errors-section,.fotos-section,.bitacora-section,.conclusiones-section,.team-section,.autoeval-section,.refs-section,.diagrama-section{padding-left:20px;padding-right:20px}
+  .features-strip,.problema-section,.about-section,.cards-section,.testimonials-section,.stats-section,.code-section,.errors-section,.fotos-section,.bitacora-section,.conclusiones-section,.team-section,.autoeval-section,.refs-section,.diagrama-section,.overview-section,.steam-section,.objetivo-section,.objetivos-section,.estado-section,.arquitectura-section,.flujo-section,.metodologia-section,.resultados-clave-section,.roles-section{padding-left:20px;padding-right:20px}
   .section-band{padding:28px 20px}.section-gap{margin:0 20px}
   .problema-grid,.about-section,.code-grid,.stats-header,.diagrama-grid,.footer-section{grid-template-columns:1fr}
   .cards-grid,.testimonials-grid,.fotos-grid,.conclusiones-grid,.personal-cards,.skills-grid,.team-grid{grid-template-columns:1fr}
   .stats-bottom{grid-template-columns:1fr 1fr}
   .charts-grid{grid-template-columns:1fr}
   .footer-left,.footer-right{padding:36px 20px}
+  .overview-grid,.steam-grid{grid-template-columns:1fr;gap:20px}
+  .metodologia-grid{grid-template-columns:1fr;gap:16px}
+  .estado-meta{grid-template-columns:1fr}
 
   /* Footer: mobile adjustments */
   .footer-section{grid-template-columns:1fr;min-height:auto;padding-top:28px;padding-bottom:40px}
